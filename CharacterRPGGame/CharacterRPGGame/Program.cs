@@ -14,16 +14,78 @@ var input = Console.ReadLine();
 if (input == "Yes")
 {
     var character = new Character();
-    
+    var equipment = new Equipment();
 
 
-    Console.Clear();
-    Console.WriteLine("Welcome Adventueer... I Am The Voice Known As Ether...No Body...No Existance...Just A Mind.\nWhat Do They Call You?");
-    Console.ReadLine();
-    Console.WriteLine("Greetings " + );
+    Character.SetName();
+    Console.WriteLine("Greetings " + character.CharacterName);
     Console.WriteLine("\nPress any key to go to the main menu.");
     Console.ReadKey();
     Console.Clear();
+
+    var isRunning = true;
+    while (isRunning)
+    {
+        //List Game Options in a Console Menu
+        Console.WriteLine("Grab What You Need, Make Sure To Train Before Leaving...");
+        Console.WriteLine("1. Look At Your Stats & Inventory\n" +
+            "2. Sword Training\n" +
+            "3. Meditation\n" +
+            "4. Learn Incantation & Spells\n" +
+            "5. Visit A Local BlackSmith");
+        Console.WriteLine("6. Raise Your Level \n" +
+            "7. Quest List\n" +
+            "8. Attempt Your Adventure\n" +
+            "9. Lore and Information\n" +
+            "10. Exit Game\n");
+        switch (Console.ReadLine())
+        {
+            case "1":
+                Console.Clear();
+                
+
+
+                break;
+            case "2":
+
+                break;
+            case "3":
+                Console.Clear();
+
+                break;
+            case "4":
+                Console.Clear();
+
+                break;
+            case "5":
+                Console.Clear();
+
+                break;
+            case "6":
+                Console.Clear();
+
+                break;
+            case "7":
+                Console.Clear();
+
+
+                break;
+            case "8":
+                Console.Clear();
+
+                break;
+            case "9":
+                Console.Clear();
+
+                break;
+            case "10":
+                Console.Clear();
+                isRunning = false;
+                break;
+            default:
+                continue;
+        }
+    }
 }
 
 else

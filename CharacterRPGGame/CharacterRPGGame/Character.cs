@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CharacterRPGGame
 {
-    internal class Character : Equipment
+   public class Character : Equipment
     {
         public string CharacterName { get; set; }
         public string AvClass { get; set; }
@@ -18,9 +18,20 @@ namespace CharacterRPGGame
         public int CharacterStrength { get; set; }
         public int DamageTaken { get; set; }
 
+        public Character()
+        {
+            CharacterName = "";
+            AvClass = "";
+            Ware = "";
+            Level = 0;
+            Magicka = 0;
+            Health = 100;
+            CharacterStrength = 0;
+            DamageTaken = 0;
 
 
-      
+        }
+
         public Character(string name, string avclass, string ware)
         {
             CharacterName = name;
@@ -35,15 +46,22 @@ namespace CharacterRPGGame
         public void CharacterStatus()
         {
             Console.WriteLine(CharacterName + "status: ");
-            Console.WriteLine($"Name: {CharacterName}\nClass: {AvClass}\nWare: {Ware}\nLevel: {Level}\nMagicka: {Magicka}\nHealth: {Health}\nStrength: {CharacterStrength}\nCurrent Equipment {EquipmentType} {EquipmentMake} {EquipmentName}");
+            Console.WriteLine($"Name: {CharacterName}\nClass: {AvClass}\nWare: {Ware}\nLevel: {Level}\nMagicka: {Magicka}\nHealth: {Health}\nStrength: {CharacterStrength}\nCurrent Equipment");
             Console.WriteLine("\nPress Any Key To Return To Your Adventure.");
             Console.ReadKey();
             Console.Clear();
         }
+       
+        public static String SetName()
+        {
+            Console.Clear();
+            Console.WriteLine("Welcome Adventueer... I Am The Voice Known As Ether...No Body...No Existance...Just A Mind.\nWhat Do They Call You?");
+            return Console.ReadLine();
+        }
 
-
-
+       
+       
 
     }
-   
+
 }
