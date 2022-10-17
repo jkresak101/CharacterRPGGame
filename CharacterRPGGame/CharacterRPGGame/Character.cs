@@ -52,11 +52,15 @@ namespace CharacterRPGGame
             Console.Clear();
         }
        
-        public static String SetName()
+       public void SetName()
         {
             Console.Clear();
-            Console.WriteLine("Welcome Adventueer... I Am The Voice Known As Ether...No Body...No Existance...Just A Mind.\nWhat Do They Call You?");
-            return Console.ReadLine();
+            Console.WriteLine("Welcome Adventurer... I Am The Voice Known As Ether...No Body...No Existance...Just A Mind.\nWhat Do They Call You?");
+            CharacterName = Console.ReadLine();
+            Console.WriteLine("Greetings " + CharacterName + "!");
+            Console.WriteLine("\nPress any key to go to the main menu.");
+            Console.ReadKey();
+            Console.Clear();
         }
 
        

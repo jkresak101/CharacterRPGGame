@@ -2,9 +2,9 @@
 using System.Diagnostics.CodeAnalysis;
 
 
-Random rd = new Random();
+//Random rd = new Random();
 
-int rand_num = rd.Next(1, 150);
+//int rand_num = rd.Next(1, 150);
 
 
 Console.WriteLine(" Beyond This Door...\n Comes An Adventure...\n Not For The Weak...\n Are You Up For This Dangerous Task?");
@@ -15,13 +15,8 @@ if (input == "Yes")
 {
     var character = new Character();
     var equipment = new Equipment();
-
-
-    Character.SetName();
-    Console.WriteLine("Greetings " + character.CharacterName);
-    Console.WriteLine("\nPress any key to go to the main menu.");
-    Console.ReadKey();
-    Console.Clear();
+    character.SetName();
+   
 
     var isRunning = true;
     while (isRunning)
@@ -42,7 +37,7 @@ if (input == "Yes")
         {
             case "1":
                 Console.Clear();
-                
+                character.CharacterStatus();
 
 
                 break;
